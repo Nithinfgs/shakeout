@@ -1,53 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="884" height="926" viewBox="0 0 884 926" role="img" aria-label="Terminal recording: shakeout runs a test command under environment changes and reports that timezone, locale, empty HOME and a TMPDIR with a space each break it.">
+<svg xmlns="http://www.w3.org/2000/svg" width="884" height="736" viewBox="0 0 884 736" role="img" aria-label="Terminal recording: shakeout runs a test command under environment changes and reports that timezone, locale, empty HOME and a TMPDIR with a space each break it.">
 <style>
 text{font:13.5px ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace;fill:#d4d7e0;white-space:pre}
 .b{font-weight:700;fill:#fff}.dim{fill:#7d8498}.red{fill:#ff6b6b}.green{fill:#6ee7a0}.yellow{fill:#f5d76e}.cyan{fill:#72c7ee}
-.l0{animation:r0 12.980000000000004s linear infinite}@keyframes r0{0%,3.08%{opacity:0}3.58%,92%{opacity:1}100%{opacity:0}}
-.l1{animation:r1 12.980000000000004s linear infinite}@keyframes r1{0%,10.02%{opacity:0}10.52%,92%{opacity:1}100%{opacity:0}}
-.l2{animation:r2 12.980000000000004s linear infinite}@keyframes r2{0%,10.40%{opacity:0}10.90%,92%{opacity:1}100%{opacity:0}}
-.l3{animation:r3 12.980000000000004s linear infinite}@keyframes r3{0%,12.33%{opacity:0}12.83%,92%{opacity:1}100%{opacity:0}}
-.l4{animation:r4 12.980000000000004s linear infinite}@keyframes r4{0%,12.71%{opacity:0}13.21%,92%{opacity:1}100%{opacity:0}}
-.l5{animation:r5 12.980000000000004s linear infinite}@keyframes r5{0%,14.41%{opacity:0}14.91%,92%{opacity:1}100%{opacity:0}}
-.l6{animation:r6 12.980000000000004s linear infinite}@keyframes r6{0%,16.10%{opacity:0}16.60%,92%{opacity:1}100%{opacity:0}}
-.l7{animation:r7 12.980000000000004s linear infinite}@keyframes r7{0%,17.80%{opacity:0}18.30%,92%{opacity:1}100%{opacity:0}}
-.l8{animation:r8 12.980000000000004s linear infinite}@keyframes r8{0%,19.49%{opacity:0}19.99%,92%{opacity:1}100%{opacity:0}}
-.l9{animation:r9 12.980000000000004s linear infinite}@keyframes r9{0%,21.19%{opacity:0}21.69%,92%{opacity:1}100%{opacity:0}}
-.l10{animation:r10 12.980000000000004s linear infinite}@keyframes r10{0%,22.88%{opacity:0}23.38%,92%{opacity:1}100%{opacity:0}}
-.l11{animation:r11 12.980000000000004s linear infinite}@keyframes r11{0%,24.58%{opacity:0}25.08%,92%{opacity:1}100%{opacity:0}}
-.l12{animation:r12 12.980000000000004s linear infinite}@keyframes r12{0%,26.27%{opacity:0}26.77%,92%{opacity:1}100%{opacity:0}}
-.l13{animation:r13 12.980000000000004s linear infinite}@keyframes r13{0%,27.97%{opacity:0}28.47%,92%{opacity:1}100%{opacity:0}}
-.l14{animation:r14 12.980000000000004s linear infinite}@keyframes r14{0%,28.35%{opacity:0}28.85%,92%{opacity:1}100%{opacity:0}}
-.l15{animation:r15 12.980000000000004s linear infinite}@keyframes r15{0%,30.28%{opacity:0}30.78%,92%{opacity:1}100%{opacity:0}}
-.l16{animation:r16 12.980000000000004s linear infinite}@keyframes r16{0%,30.66%{opacity:0}31.16%,92%{opacity:1}100%{opacity:0}}
-.l17{animation:r17 12.980000000000004s linear infinite}@keyframes r17{0%,32.59%{opacity:0}33.09%,92%{opacity:1}100%{opacity:0}}
-.l18{animation:r18 12.980000000000004s linear infinite}@keyframes r18{0%,34.51%{opacity:0}35.01%,92%{opacity:1}100%{opacity:0}}
-.l19{animation:r19 12.980000000000004s linear infinite}@keyframes r19{0%,36.44%{opacity:0}36.94%,92%{opacity:1}100%{opacity:0}}
-.l20{animation:r20 12.980000000000004s linear infinite}@keyframes r20{0%,38.37%{opacity:0}38.87%,92%{opacity:1}100%{opacity:0}}
-.l21{animation:r21 12.980000000000004s linear infinite}@keyframes r21{0%,40.29%{opacity:0}40.79%,92%{opacity:1}100%{opacity:0}}
-.l22{animation:r22 12.980000000000004s linear infinite}@keyframes r22{0%,42.22%{opacity:0}42.72%,92%{opacity:1}100%{opacity:0}}
-.l23{animation:r23 12.980000000000004s linear infinite}@keyframes r23{0%,42.60%{opacity:0}43.10%,92%{opacity:1}100%{opacity:0}}
-.l24{animation:r24 12.980000000000004s linear infinite}@keyframes r24{0%,44.53%{opacity:0}45.03%,92%{opacity:1}100%{opacity:0}}
-.l25{animation:r25 12.980000000000004s linear infinite}@keyframes r25{0%,46.46%{opacity:0}46.96%,92%{opacity:1}100%{opacity:0}}
-.l26{animation:r26 12.980000000000004s linear infinite}@keyframes r26{0%,48.38%{opacity:0}48.88%,92%{opacity:1}100%{opacity:0}}
-.l27{animation:r27 12.980000000000004s linear infinite}@keyframes r27{0%,50.31%{opacity:0}50.81%,92%{opacity:1}100%{opacity:0}}
-.l28{animation:r28 12.980000000000004s linear infinite}@keyframes r28{0%,52.23%{opacity:0}52.73%,92%{opacity:1}100%{opacity:0}}
-.l29{animation:r29 12.980000000000004s linear infinite}@keyframes r29{0%,52.62%{opacity:0}53.12%,92%{opacity:1}100%{opacity:0}}
-.l30{animation:r30 12.980000000000004s linear infinite}@keyframes r30{0%,54.55%{opacity:0}55.05%,92%{opacity:1}100%{opacity:0}}
-.l31{animation:r31 12.980000000000004s linear infinite}@keyframes r31{0%,56.47%{opacity:0}56.97%,92%{opacity:1}100%{opacity:0}}
-.l32{animation:r32 12.980000000000004s linear infinite}@keyframes r32{0%,58.40%{opacity:0}58.90%,92%{opacity:1}100%{opacity:0}}
-.l33{animation:r33 12.980000000000004s linear infinite}@keyframes r33{0%,60.32%{opacity:0}60.82%,92%{opacity:1}100%{opacity:0}}
-.l34{animation:r34 12.980000000000004s linear infinite}@keyframes r34{0%,62.25%{opacity:0}62.75%,92%{opacity:1}100%{opacity:0}}
-.l35{animation:r35 12.980000000000004s linear infinite}@keyframes r35{0%,64.18%{opacity:0}64.68%,92%{opacity:1}100%{opacity:0}}
-.l36{animation:r36 12.980000000000004s linear infinite}@keyframes r36{0%,64.56%{opacity:0}65.06%,92%{opacity:1}100%{opacity:0}}
-.l37{animation:r37 12.980000000000004s linear infinite}@keyframes r37{0%,66.49%{opacity:0}66.99%,92%{opacity:1}100%{opacity:0}}
-.l38{animation:r38 12.980000000000004s linear infinite}@keyframes r38{0%,68.41%{opacity:0}68.91%,92%{opacity:1}100%{opacity:0}}
-.l39{animation:r39 12.980000000000004s linear infinite}@keyframes r39{0%,70.34%{opacity:0}70.84%,92%{opacity:1}100%{opacity:0}}
-.l40{animation:r40 12.980000000000004s linear infinite}@keyframes r40{0%,72.27%{opacity:0}72.77%,92%{opacity:1}100%{opacity:0}}
-.l41{animation:r41 12.980000000000004s linear infinite}@keyframes r41{0%,74.19%{opacity:0}74.69%,92%{opacity:1}100%{opacity:0}}
-.l42{animation:r42 12.980000000000004s linear infinite}@keyframes r42{0%,74.58%{opacity:0}75.08%,92%{opacity:1}100%{opacity:0}}
-.l43{animation:r43 12.980000000000004s linear infinite}@keyframes r43{0%,74.96%{opacity:0}75.46%,92%{opacity:1}100%{opacity:0}}
+.l0{animation:r0 10.88s linear infinite}@keyframes r0{0%,3.68%{opacity:0}4.18%,92%{opacity:1}100%{opacity:0}}
+.l1{animation:r1 10.88s linear infinite}@keyframes r1{0%,11.95%{opacity:0}12.45%,92%{opacity:1}100%{opacity:0}}
+.l2{animation:r2 10.88s linear infinite}@keyframes r2{0%,12.41%{opacity:0}12.91%,92%{opacity:1}100%{opacity:0}}
+.l3{animation:r3 10.88s linear infinite}@keyframes r3{0%,14.71%{opacity:0}15.21%,92%{opacity:1}100%{opacity:0}}
+.l4{animation:r4 10.88s linear infinite}@keyframes r4{0%,15.17%{opacity:0}15.67%,92%{opacity:1}100%{opacity:0}}
+.l5{animation:r5 10.88s linear infinite}@keyframes r5{0%,17.19%{opacity:0}17.69%,92%{opacity:1}100%{opacity:0}}
+.l6{animation:r6 10.88s linear infinite}@keyframes r6{0%,19.21%{opacity:0}19.71%,92%{opacity:1}100%{opacity:0}}
+.l7{animation:r7 10.88s linear infinite}@keyframes r7{0%,21.23%{opacity:0}21.73%,92%{opacity:1}100%{opacity:0}}
+.l8{animation:r8 10.88s linear infinite}@keyframes r8{0%,23.25%{opacity:0}23.75%,92%{opacity:1}100%{opacity:0}}
+.l9{animation:r9 10.88s linear infinite}@keyframes r9{0%,25.28%{opacity:0}25.78%,92%{opacity:1}100%{opacity:0}}
+.l10{animation:r10 10.88s linear infinite}@keyframes r10{0%,27.30%{opacity:0}27.80%,92%{opacity:1}100%{opacity:0}}
+.l11{animation:r11 10.88s linear infinite}@keyframes r11{0%,29.32%{opacity:0}29.82%,92%{opacity:1}100%{opacity:0}}
+.l12{animation:r12 10.88s linear infinite}@keyframes r12{0%,31.34%{opacity:0}31.84%,92%{opacity:1}100%{opacity:0}}
+.l13{animation:r13 10.88s linear infinite}@keyframes r13{0%,33.36%{opacity:0}33.86%,92%{opacity:1}100%{opacity:0}}
+.l14{animation:r14 10.88s linear infinite}@keyframes r14{0%,33.82%{opacity:0}34.32%,92%{opacity:1}100%{opacity:0}}
+.l15{animation:r15 10.88s linear infinite}@keyframes r15{0%,36.12%{opacity:0}36.62%,92%{opacity:1}100%{opacity:0}}
+.l16{animation:r16 10.88s linear infinite}@keyframes r16{0%,36.58%{opacity:0}37.08%,92%{opacity:1}100%{opacity:0}}
+.l17{animation:r17 10.88s linear infinite}@keyframes r17{0%,38.88%{opacity:0}39.38%,92%{opacity:1}100%{opacity:0}}
+.l18{animation:r18 10.88s linear infinite}@keyframes r18{0%,41.18%{opacity:0}41.68%,92%{opacity:1}100%{opacity:0}}
+.l19{animation:r19 10.88s linear infinite}@keyframes r19{0%,43.47%{opacity:0}43.97%,92%{opacity:1}100%{opacity:0}}
+.l20{animation:r20 10.88s linear infinite}@keyframes r20{0%,45.77%{opacity:0}46.27%,92%{opacity:1}100%{opacity:0}}
+.l21{animation:r21 10.88s linear infinite}@keyframes r21{0%,48.07%{opacity:0}48.57%,92%{opacity:1}100%{opacity:0}}
+.l22{animation:r22 10.88s linear infinite}@keyframes r22{0%,50.37%{opacity:0}50.87%,92%{opacity:1}100%{opacity:0}}
+.l23{animation:r23 10.88s linear infinite}@keyframes r23{0%,50.83%{opacity:0}51.33%,92%{opacity:1}100%{opacity:0}}
+.l24{animation:r24 10.88s linear infinite}@keyframes r24{0%,53.13%{opacity:0}53.63%,92%{opacity:1}100%{opacity:0}}
+.l25{animation:r25 10.88s linear infinite}@keyframes r25{0%,55.42%{opacity:0}55.92%,92%{opacity:1}100%{opacity:0}}
+.l26{animation:r26 10.88s linear infinite}@keyframes r26{0%,57.72%{opacity:0}58.22%,92%{opacity:1}100%{opacity:0}}
+.l27{animation:r27 10.88s linear infinite}@keyframes r27{0%,60.02%{opacity:0}60.52%,92%{opacity:1}100%{opacity:0}}
+.l28{animation:r28 10.88s linear infinite}@keyframes r28{0%,62.32%{opacity:0}62.82%,92%{opacity:1}100%{opacity:0}}
+.l29{animation:r29 10.88s linear infinite}@keyframes r29{0%,62.78%{opacity:0}63.28%,92%{opacity:1}100%{opacity:0}}
+.l30{animation:r30 10.88s linear infinite}@keyframes r30{0%,65.07%{opacity:0}65.57%,92%{opacity:1}100%{opacity:0}}
+.l31{animation:r31 10.88s linear infinite}@keyframes r31{0%,67.37%{opacity:0}67.87%,92%{opacity:1}100%{opacity:0}}
+.l32{animation:r32 10.88s linear infinite}@keyframes r32{0%,69.67%{opacity:0}70.17%,92%{opacity:1}100%{opacity:0}}
+.l33{animation:r33 10.88s linear infinite}@keyframes r33{0%,70.13%{opacity:0}70.63%,92%{opacity:1}100%{opacity:0}}
 </style>
-<rect width="884" height="926" rx="12" fill="#14161c"/>
+<rect width="884" height="736" rx="12" fill="#14161c"/>
 <rect width="884" height="38" rx="12" fill="#1d2029"/>
 <rect y="26" width="884" height="12" fill="#1d2029"/>
 <circle cx="24" cy="19" r="6" fill="#ff5f57"/><circle cx="44" cy="19" r="6" fill="#febc2e"/><circle cx="64" cy="19" r="6" fill="#28c840"/>
@@ -84,16 +74,6 @@ text{font:13.5px ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',m
 <text class="l29" x="22" y="619" xml:space="preserve"><tspan class="red">✘</tspan> <tspan class="b">locale-german</tspan> <tspan class="dim">[locale]</tspan>  LC_ALL=de_DE.UTF-8: 1.234,5 instead of 1,234.5</text>
 <text class="l30" x="22" y="638" xml:space="preserve">    <tspan class="cyan">│</tspan> FAIL total 1234567.5 renders as 1,234,567.5</text>
 <text class="l31" x="22" y="657" xml:space="preserve">    <tspan class="cyan">│</tspan> expected "1,234,567.5", got "1.234.567,5"</text>
-<text class="l32" x="22" y="676" xml:space="preserve">    <tspan class="dim">→</tspan> Number or date formatting uses the ambient locale and the result is compared or parsed as if</text>
-<text class="l33" x="22" y="695" xml:space="preserve">      it were en-US.</text>
-<text class="l34" x="22" y="714" xml:space="preserve">    <tspan class="dim">$</tspan> env LC_ALL=de_DE.UTF-8 LANG=de_DE.UTF-8 node checks.js</text>
-<text class="l35" x="22" y="733" xml:space="preserve"></text>
-<text class="l36" x="22" y="752" xml:space="preserve"><tspan class="red">✘</tspan> <tspan class="b">home-empty</tspan> <tspan class="dim">[home]</tspan>  HOME points at a brand-new empty directory</text>
-<text class="l37" x="22" y="771" xml:space="preserve">    <tspan class="cyan">│</tspan> FAIL font cache directory ~/.cache can be listed</text>
-<text class="l38" x="22" y="790" xml:space="preserve">    <tspan class="cyan">│</tspan> ENOENT: no such file or directory, scandir '&lt;PATH&gt;/home-empty/.cache'</text>
-<text class="l39" x="22" y="809" xml:space="preserve">    <tspan class="dim">→</tspan> Code assumes ~/.config, ~/.cache or a dotfile already exists. A fresh CI user or container has</text>
-<text class="l40" x="22" y="828" xml:space="preserve">      none of them.</text>
-<text class="l41" x="22" y="847" xml:space="preserve"></text>
-<text class="l42" x="22" y="866" xml:space="preserve"></text>
-<text class="l43" x="22" y="885" xml:space="preserve"><tspan class="dim">  ... 7 more lines</tspan></text>
+<text class="l32" x="22" y="676" xml:space="preserve"></text>
+<text class="l33" x="22" y="695" xml:space="preserve"><tspan class="dim">  ... 17 more lines</tspan></text>
 </svg>

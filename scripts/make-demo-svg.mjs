@@ -10,7 +10,7 @@ import { runDemo } from './demo.mjs';
 const SKIP =
   'tz-pago-pago,tz-kolkata,locale-unset,locale-turkish,path-unicode,path-deep,term-dumb,ci-off,py-hashseed,single-cpu,locale-c';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const MAX_LINES = 40;
+const MAX_LINES = 30;
 const COLS = 100;
 const CHAR_W = 8.4;
 const LINE_H = 19;

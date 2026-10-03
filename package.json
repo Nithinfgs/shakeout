@@ -1,0 +1,60 @@
+{
+  "name": "shakeout",
+  "version": "0.1.0",
+  "description": "Find the hidden environment assumptions in any command: timezone, locale, HOME, paths with spaces, CI variables. Zero dependencies.",
+  "type": "module",
+  "bin": {
+    "shakeout": "bin/shakeout.js"
+  },
+  "main": "src/engine.js",
+  "exports": {
+    ".": "./src/engine.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "bin",
+    "src",
+    "examples/demo-app",
+    "docs/assets/demo.svg",
+    "shakeout.schema.json"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "typecheck": "tsc -p jsconfig.json",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "demo": "cd examples/demo-app && TZ=UTC node ../../bin/shakeout.js -- node checks.js",
+    "demo:svg": "node scripts/make-demo-svg.mjs",
+    "check": "npm run lint && npm run typecheck && npm test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "cli",
+    "developer-tools",
+    "testing",
+    "flaky-tests",
+    "ci",
+    "timezone",
+    "locale",
+    "works-on-my-machine",
+    "reproducibility",
+    "environment"
+  ],
+  "author": "Nithinfgs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nithinfgs/shakeout.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nithinfgs/shakeout/issues"
+  },
+  "homepage": "https://github.com/Nithinfgs/shakeout#readme",
+  "devDependencies": {
+    "@biomejs/biome": "^2.0.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}

@@ -10,7 +10,9 @@ Timezone, locale, empty `HOME`, a path with spaces, CI variables, `TMPDIR` and m
 ![Node 20+](https://img.shields.io/badge/node-%E2%89%A520-339933)
 ![Dependencies: 0](https://img.shields.io/badge/runtime%20dependencies-0-brightgreen)
 
-<code>npx github:Nithinfgs/shakeout -- npm test</code>
+```sh
+npx github:Nithinfgs/shakeout -- npm test
+```
 
 <img src="docs/assets/demo.svg" alt="Terminal recording: shakeout runs a test command under environment changes and reports that timezone, locale, empty HOME and a TMPDIR with a space each break it" width="760">
 

@@ -120,3 +120,13 @@ test('node_modules is linked into relocated checkouts', () => {
     cleanup();
   }
 });
+
+test('running the demo leaves its directory exactly as it was', () => {
+  const list = () =>
+    spawnSync('find', ['.', '-not', '-path', './.git*'], { cwd: DEMO, encoding: 'utf8' })
+      .stdout.split('\n')
+      .sort();
+  const before = list();
+  shakeout(['--confirm', '0', '--', 'node', 'checks.js'], DEMO, { TZ: 'UTC' });
+  assert.deepEqual(list(), before);
+});

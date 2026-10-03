@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "shakeout.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "compare": {
+      "enum": ["exit", "output"],
+      "description": "exit: only pass/fail. output: also flag changed output."
+    },
+    "timeout": { "type": "number", "minimum": 1, "description": "Per-run timeout in seconds." },
+    "confirm": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Extra reruns used to confirm a difference."
+    },
+    "only": { "type": "array", "items": { "type": "string" } },
+    "skip": { "type": "array", "items": { "type": "string" } },
+    "ignore": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Regular expressions removed from output before comparing (output mode)."
+    },
+    "perturbations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+          "category": { "type": "string" },
+          "description": { "type": "string" },
+          "env": { "type": "object", "additionalProperties": { "type": "string" } },
+          "unset": { "type": "array", "items": { "type": "string" } },
+          "mkdirs": { "type": "array", "items": { "type": "string" } },
+          "path": {
+            "type": "string",
+            "description": "Run from a copy of the project placed under this relative path."
+          },
+          "umask": { "type": "string" },
+          "hint": { "type": "string", "description": "Shown when this perturbation changes the result." }
+        }
+      }
+    }
+  }
+}

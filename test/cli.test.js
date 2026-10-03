@@ -1,12 +1,17 @@
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { test } from 'node:test';
+import { after, test } from 'node:test';
 import { tempDir } from './helpers.js';
 
 const BIN = fileURLToPath(new URL('../bin/shakeout.js', import.meta.url));
+// The demo's baseline needs an existing ~/.cache; give it one so tests do not depend on the contributor's HOME.
+const DEMO_HOME = mkdtempSync(join(tmpdir(), 'shakeout-test-home-'));
+mkdirSync(join(DEMO_HOME, '.cache'));
+after(() => rmSync(DEMO_HOME, { recursive: true, force: true }));
 const DEMO = fileURLToPath(new URL('../examples/demo-app', import.meta.url));
 
 function shakeout(args, cwd = DEMO, env = {}) {
@@ -43,7 +48,10 @@ test('unknown flag and unknown perturbation are usage errors', () => {
 });
 
 test('demo app: exit 1 and the expected perturbations are found (JSON)', () => {
-  const r = shakeout(['--json', '--confirm', '1', '--', 'node', 'checks.js'], DEMO, { TZ: 'UTC' });
+  const r = shakeout(['--json', '--confirm', '1', '--', 'node', 'checks.js'], DEMO, {
+    TZ: 'UTC',
+    HOME: DEMO_HOME,
+  });
   assert.equal(r.status, 1, r.stderr);
   const report = JSON.parse(r.stdout);
   assert.equal(report.version, 1);
@@ -127,6 +135,6 @@ test('running the demo leaves its directory exactly as it was', () => {
       .stdout.split('\n')
       .sort();
   const before = list();
-  shakeout(['--confirm', '0', '--', 'node', 'checks.js'], DEMO, { TZ: 'UTC' });
+  shakeout(['--confirm', '0', '--', 'node', 'checks.js'], DEMO, { TZ: 'UTC', HOME: DEMO_HOME });
   assert.deepEqual(list(), before);
 });

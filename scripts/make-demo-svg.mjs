@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 // Renders docs/assets/demo.svg: an animated terminal showing REAL shakeout output
 // against examples/demo-app. Run `npm run demo:svg` to regenerate it.
-import { spawnSync } from 'node:child_process';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { runDemo } from './demo.mjs';
 
 // A representative subset keeps the hero short; the full 20-perturbation run is `npm run demo`.
 const SKIP =
@@ -18,15 +18,7 @@ const PAD = 22;
 const TOP = 46; // title bar
 const CYCLE = 16; // seconds per loop
 
-const run = spawnSync(
-  process.execPath,
-  [resolve(root, 'bin/shakeout.js'), '--color', '--skip', SKIP, '--', 'node', 'checks.js'],
-  {
-    cwd: resolve(root, 'examples/demo-app'),
-    encoding: 'utf8',
-    env: { ...process.env, TZ: 'UTC', NO_COLOR: '' },
-  },
-);
+const run = runDemo(['--color', '--skip', SKIP]);
 if (run.status !== 1) {
   console.error(run.stderr || run.stdout);
   throw new Error(`expected exit code 1 from the demo app, got ${run.status}`);

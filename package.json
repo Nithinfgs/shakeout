@@ -23,7 +23,7 @@
     "typecheck": "tsc -p jsconfig.json",
     "lint": "biome check .",
     "format": "biome format --write .",
-    "demo": "cd examples/demo-app && TZ=UTC node ../../bin/shakeout.js -- node checks.js",
+    "demo": "node scripts/demo.mjs",
     "demo:svg": "node scripts/make-demo-svg.mjs",
     "check": "npm run lint && npm run typecheck && npm test"
   },

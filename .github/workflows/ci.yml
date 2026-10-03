@@ -38,9 +38,8 @@ jobs:
           node-version: 22
       # The demo app has 7 planted assumptions, so exit code 1 is the expected result.
       - name: Run shakeout against the demo app
-        working-directory: examples/demo-app
         run: |
           set +e
-          TZ=UTC node ../../bin/shakeout.js --markdown -- node checks.js >> "$GITHUB_STEP_SUMMARY"
+          node scripts/demo.mjs --markdown >> "$GITHUB_STEP_SUMMARY"
           code=$?
           test "$code" -eq 1

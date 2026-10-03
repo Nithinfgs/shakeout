@@ -1,0 +1,15 @@
+{
+  "$schema": "../shakeout.schema.json",
+  "compare": "exit",
+  "timeout": 300,
+  "skip": ["path-deep"],
+  "perturbations": [
+    {
+      "id": "region-eu",
+      "category": "custom",
+      "description": "REGION=eu-west-1 instead of the developer default",
+      "env": { "REGION": "eu-west-1" },
+      "hint": "Code hard-codes the default region."
+    }
+  ]
+}

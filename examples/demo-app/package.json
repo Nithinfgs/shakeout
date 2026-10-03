@@ -1,0 +1,10 @@
+{
+  "name": "demo-app",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A tiny project with realistic hidden environment assumptions. Used to demo shakeout.",
+  "scripts": {
+    "test": "node checks.js"
+  }
+}

@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Node ${{ matrix.node }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        node: [20, 22, 24]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+
+  dogfood:
+    name: shakeout on its own demo
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # The demo app has 7 planted assumptions, so exit code 1 is the expected result.
+      - name: Run shakeout against the demo app
+        working-directory: examples/demo-app
+        run: |
+          set +e
+          TZ=UTC node ../../bin/shakeout.js --markdown -- node checks.js >> "$GITHUB_STEP_SUMMARY"
+          code=$?
+          test "$code" -eq 1
